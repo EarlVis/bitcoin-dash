@@ -39,7 +39,7 @@ BTC_data = yf.Ticker(ticker_symbol).history(period='10y').reset_index()
 BTC_data['Date'] = pd.to_datetime(BTC_data['Date'])
 BTC_data['Date'] = BTC_data['Date'].dt.strftime('%Y-%m-%d')
 start_date = '2015-01-01'
-end_date = '2024-01-01'
+end_date = '2026-01-01'
 BTC_data = BTC_data[(BTC_data['Date'] >= start_date) & (BTC_data['Date'] < end_date)]
 BTC_data = BTC_data[['Date', 'Open', 'High', 'Low', 'Close', 'Volume']]
 BTC_data.set_index('Date', inplace=True)
