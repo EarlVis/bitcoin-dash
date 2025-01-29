@@ -78,7 +78,7 @@ if page == "Home":
         st.dataframe(BTC_display)
 
     # Display Line Chart
-    st.header("Bitcoin Price Trend 2015 - 2023")
+    st.header("Bitcoin Price Trend 2015 - 2025")
     fig = go.Figure()
 
     fig.add_trace(go.Scatter(
@@ -102,7 +102,7 @@ if page == "Home":
     )
     st.plotly_chart(fig)
     
-    st.markdown("### Bitcoin Price Trend Over the Years (2015 - 2023)")
+    st.markdown("### Bitcoin Price Trend Over the Years (2015 - 2025)")
     st.markdown("""
     ### Overview
 
@@ -165,7 +165,7 @@ elif page == "Exploratory Data Analysis":
         st.subheader("Yearly Trends for Close Prices")
         
         # Add a dropdown to select the year
-        selected_year = st.selectbox("Select Year", range(2015, 2024))
+        selected_year = st.selectbox("Select Year", range(2015, 2025))
         
         # Filter data for the selected year
         year_data = BTC_data[f'{selected_year}-01-01':f'{selected_year}-12-31']
@@ -296,7 +296,7 @@ elif page == "Exploratory Data Analysis":
         st.subheader("Candlestick Chart for Quarters")
 
         # Candlestick Chart for Quarters
-        years = range(2015, 2024)
+        years = range(2015, 2025)
 
         selected_year = str(st.selectbox("Select a Year", years))
 
@@ -440,8 +440,8 @@ elif page == "Exploratory Data Analysis":
     elif analysis_option == "Volatility Analysis":
         st.subheader("Volatility Analysis")
 
-        # Create a range of years from 2015 to 2023
-        years = range(2015, 2024)
+        # Create a range of years from 2015 to 2025
+        years = range(2015, 2025)
         # Select a year from the dropdown
         selected_year = st.selectbox("Select a Year", years)
 
